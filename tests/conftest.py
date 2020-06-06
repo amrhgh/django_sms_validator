@@ -56,3 +56,6 @@ def pytest_configure():
 
     except AttributeError:
         pass
+
+
+pytest_configure()
