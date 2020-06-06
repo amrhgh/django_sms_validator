@@ -1,6 +1,4 @@
 from .conftest import pytest_configure
-
-pytest_configure()
 from sms_validator.models import PhoneCode
 
 from django.test import TestCase
