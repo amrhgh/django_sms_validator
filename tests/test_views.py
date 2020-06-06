@@ -1,3 +1,4 @@
+from .conftest import pytest_configure
 import kavenegar
 from rest_framework.test import APIRequestFactory
 
@@ -43,5 +44,4 @@ class TestSendSMS(TestCase):
         obj.save()
         response = self.view(self.request)
         self.assertEqual(response.status_code, 405)
-
 

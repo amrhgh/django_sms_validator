@@ -30,6 +30,18 @@ class TestSerializer(TestCase):
         obj.save()
         self.assertEqual(PhoneCode.objects.count(), 1)
 
+    def test_update_code(self):
+        obj = PhoneCodeSerializer(data={'phone_number': self.phone_number,
+                                        'code': self.code})
+        obj.is_valid()
+        obj.save()
+        phone_code = PhoneCode.objects.get(phone_number=self.phone_number)
+        second_code = code_generation()
+        obj = PhoneCodeSerializer(phone_code, data={'code': second_code}, partial=True)
+        obj.is_valid()
+        obj.save()
+        phone_code = PhoneCode.objects.get(phone_number=self.phone_number)
+        self.assertEqual(phone_code.code, second_code)
 
 
 

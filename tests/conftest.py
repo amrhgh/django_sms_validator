@@ -58,4 +58,8 @@ def pytest_configure():
         pass
 
 
-pytest_configure()
+run_before = False
+
+if not run_before:
+    pytest_configure()
+    run_before = True
