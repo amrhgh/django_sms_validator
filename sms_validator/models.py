@@ -2,7 +2,8 @@ from django.db import models
 
 
 class PhoneCode(models.Model):
-    phone_number = models.CharField(unique=True)
+    # TODO: add phone number validator
+    phone_number = models.CharField(max_length=11, unique=True)
     code = models.CharField(max_length=5)
     created_at = models.DateTimeField(null=True, blank=True)
     expire_at = models.DateTimeField()
