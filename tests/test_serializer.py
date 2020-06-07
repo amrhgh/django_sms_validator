@@ -42,10 +42,3 @@ class TestSerializer(TestCase):
         obj.save()
         phone_code = PhoneCode.objects.get(phone_number=self.phone_number)
         self.assertEqual(phone_code.code, second_code)
-
-
-
-
-
-
-

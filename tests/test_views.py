@@ -42,6 +42,6 @@ class TestSendSMS(TestCase):
                                         'code': self.code})
         obj.is_valid()
         obj.save()
-        response = self.view(self.request)
+        response = self.view(request=self.request)
         self.assertEqual(response.status_code, 405)
 
