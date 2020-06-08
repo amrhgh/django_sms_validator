@@ -1,9 +1,9 @@
 from .conftest import pytest_configure
-from sms_validator.models import PhoneCode
+from django_rest_sms_validator.models import PhoneCode
 
 from django.test import TestCase
-from sms_validator.serializers import PhoneCodeSerializer
-from sms_validator.utils import code_generation
+from django_rest_sms_validator.serializers import PhoneCodeSerializer
+from django_rest_sms_validator.utils import code_generation
 
 
 class TestSerializer(TestCase):

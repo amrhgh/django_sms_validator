@@ -41,7 +41,7 @@ def pytest_configure():
             'django.contrib.staticfiles',
             'rest_framework',
             'tests',
-            'sms_validator'
+            'django_rest_sms_validator'
         ),
         PASSWORD_HASHERS=(
             'django.contrib.auth.hashers.MD5PasswordHasher',
@@ -51,7 +51,7 @@ def pytest_configure():
     try:
         import django
         django.setup()
-        call_command('makemigrations', 'sms_validator')
+        call_command('makemigrations', 'django_rest_sms_validator')
         call_command('migrate')
 
     except AttributeError:

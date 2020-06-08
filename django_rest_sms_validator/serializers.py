@@ -2,8 +2,8 @@ import datetime
 
 from rest_framework import serializers
 
-from sms_validator.models import PhoneCode
-from sms_validator.settings import api_settings
+from django_rest_sms_validator.models import PhoneCode
+from django_rest_sms_validator.settings import api_settings
 
 
 class PhoneCodeSerializer(serializers.ModelSerializer):

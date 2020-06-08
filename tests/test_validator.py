@@ -5,11 +5,11 @@ from rest_framework.exceptions import ValidationError
 from rest_framework.generics import CreateAPIView
 from rest_framework.test import APIRequestFactory
 
-from sms_validator.serializers import PhoneCodeSerializer
-from sms_validator.validator import sms_validator
+from django_rest_sms_validator.serializers import PhoneCodeSerializer
+from django_rest_sms_validator.validator import sms_validator
 from django.test import TestCase
 
-from sms_validator.utils import code_generation
+from django_rest_sms_validator.utils import code_generation
 
 
 class ViewWithSMSValidator(CreateAPIView):

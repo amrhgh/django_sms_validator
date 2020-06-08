@@ -2,8 +2,8 @@ import datetime
 
 from rest_framework.exceptions import ValidationError
 
-from sms_validator.models import PhoneCode
-from sms_validator.settings import api_settings
+from django_rest_sms_validator.models import PhoneCode
+from django_rest_sms_validator.settings import api_settings
 
 
 def sms_validator(func):
