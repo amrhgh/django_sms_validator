@@ -2,10 +2,10 @@ from .conftest import pytest_configure
 import kavenegar
 from rest_framework.test import APIRequestFactory
 
-from sms_validator.serializers import PhoneCodeSerializer
-from sms_validator.settings import api_settings
-from sms_validator.utils import code_generation
-from sms_validator.views import SendSMSView
+from django_rest_sms_validator.serializers import PhoneCodeSerializer
+from django_rest_sms_validator.settings import api_settings
+from django_rest_sms_validator.utils import code_generation
+from django_rest_sms_validator.views import SendSMSView
 from django.test import TestCase
 
 

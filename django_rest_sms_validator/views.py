@@ -3,10 +3,10 @@ import datetime
 from rest_framework.generics import CreateAPIView
 from rest_framework.response import Response
 
-from sms_validator.models import PhoneCode
-from sms_validator.serializers import PhoneCodeSerializer
-from sms_validator.settings import api_settings
-from sms_validator.utils import send_sms_kavenegar
+from django_rest_sms_validator.models import PhoneCode
+from django_rest_sms_validator.serializers import PhoneCodeSerializer
+from django_rest_sms_validator.settings import api_settings
+from django_rest_sms_validator.utils import send_sms_kavenegar
 
 
 class SendSMSView(CreateAPIView):
