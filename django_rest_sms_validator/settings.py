@@ -7,6 +7,7 @@ USER_SETTINGS = getattr(settings, 'SMS_VALIDATOR', dict())
 DEFAULTS = {
     'NEXT_SMS_TIMEOUT': timedelta(seconds=30),
     'TOKEN_LIFETIME': timedelta(minutes=2),
+    'CODE_LENGTH': 5
 }
 
 api_settings = {**DEFAULTS, **USER_SETTINGS}

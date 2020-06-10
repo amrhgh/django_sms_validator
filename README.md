@@ -46,11 +46,13 @@ example:
     SMS_VALIDATOR = {
         'NEXT_SMS_TIMEOUT': timedelta(seconds=30),
         'TOKEN_LIFETIME': timedelta(minutes=2),
+        'CODE_LENGTH': 5
     }
     
 NEXT_SMS_TIMEOUT: time limitation between two sms with same phone number
 
 TOKEN_LIFETIME: time period that the token sent is valid.
 
+CODE_LENGTH: length of generated code
     
 
