@@ -33,6 +33,14 @@ class PhoneCodeSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 
+    def validate_phone_number(self, value):
+        message = f'{value} is not valid phone number'
+        if not value.isnumeric():
+            raise serializers.ValidationError(message)
+        if len(value) != 11:
+            raise serializers.ValidationError(message)
+        return value
+
     class Meta:
         model = PhoneCode
         fields = '__all__'

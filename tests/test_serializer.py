@@ -42,3 +42,13 @@ class TestSerializer(TestCase):
         obj.save()
         phone_code = PhoneCode.objects.get(phone_number=self.phone_number)
         self.assertEqual(phone_code.code, second_code)
+
+    def test_if_phone_code_is_invalid(self):
+        first_invalid_phone_number = '0900000'
+        obj = PhoneCodeSerializer(data={'phone_number': first_invalid_phone_number,
+                                        'code': self.code})
+        self.assertFalse(obj.is_valid())
+        second_invalid_phone_number = '0900aaaaa00'
+        obj = PhoneCodeSerializer(data={'phone_number': second_invalid_phone_number,
+                                        'code': self.code})
+        self.assertFalse(obj.is_valid())
